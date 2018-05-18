@@ -1,0 +1,344 @@
+$blue: #8DB7B6;
+$blue_dark:#658280;
+$pink: #BAAAAA;
+$pink_dark : #897E7E;
+$margin: 12.8028125%;
+$lineheight : 2;
+@mixin button{
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 100;
+    font-size: 1.5em;
+}
+@mixin title{
+    color: dimgrey;
+    margin: 0em $margin 3em;
+    line-height: $lineheight;
+    font-size: 1.8em;
+    font-weight: 100;
+}
+body{
+    font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif;
+}
+.hidden{
+    font-size: 0;
+    overflow: hidden;
+    position: absolute;
+}
+
+.navigation .active{
+    font-size: 2em;
+    color: $pink;
+    text-transform: uppercase;
+    font-weight: 700;
+
+}
+///////////////////////////////////////////////////////Accueil
+///////////////////////////////////////////////////////Accueil_header
+
+
+.header--img{
+    background: url("../img/child.jpeg") bottom no-repeat;
+    background-size: 100%;
+    height: 100vh;
+    margin-top: 2em;
+}
+
+.header--img:hover{
+    background-color: rgba(255,255,255,0.7);
+}
+
+.header--flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.logo img{
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 2em 0% 0em 50%;
+}
+
+.navigation ul{
+    display: flex;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: dimgrey;
+    font-size: 1.8em;
+    margin-right: 2em;
+    border-right: 1px solid lightgray;
+    padding-right: 2em;
+
+}
+.navigation .header--border--none{
+    border-right: none;
+}
+
+///////////////////////////////////////////////////////END_Accueil_header
+///////////////////////////////////////////////////////Accueil_qui sommes nous
+
+.qui_sommes_nous h1{
+    margin: 5em $margin 1.5em;
+    font-size: 3em;
+    border-bottom: 3px solid $blue;
+    width: 280px;
+    padding-bottom: 0.8em;
+    font-weight: 100;
+    color: dimgrey;
+}
+
+.qui_sommes_nous p{
+    @include title;
+}
+.qui_sommes_nous a{
+    @include button;
+    background-color: $blue;
+    padding: 1em 0%;
+    display: block;
+    width: 180px;
+    margin: 0em $margin 10em;
+    text-align: center;
+}
+
+.qui_sommes_nous a:hover{
+    background-color: $blue_dark;
+}
+
+///////////////////////////////////////////////////////END_Accueil_qui sommes nous
+///////////////////////////////////////////////////////Accueil_Equipe_encart
+
+.equipe--img{
+    background: url("../img/equipe.jpg") no-repeat;
+    background-size: 100%;
+    height: 100vh;
+}
+
+.encart_equipe_texte{
+    @include title;
+    font-size: 4em;
+    text-align: center;
+    font-weight: 100;
+    margin-top: -3em;
+}
+
+.encart_equipe_texte span{
+    color: $pink;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.encart_equipe a{
+    @include button;
+    background-color: $pink;
+    padding: 1em 0%;
+    display: block;
+    width: 250px;
+    margin: -5em auto;
+    text-align: center;
+}
+
+.encart_equipe{
+    margin-bottom: 20em;
+}
+
+.encart_equipe a:hover{
+    background-color: $pink_dark;
+}
+///////////////////////////////////////////////////////END_Accueil_Equipe_encart
+///////////////////////////////////////////////////////Accueil_Equipe_activite
+
+.activitees{
+    background-color: $pink;
+    display: flex;
+    justify-content: space-around;
+    padding: 0em 45% 8em;
+}
+
+.activitees h1{
+    @include title;
+    font-size: 3em;
+    width: 300px;
+    margin: initial;
+}
+
+.activitees--img{
+    width: 300px;
+    height: auto;
+    margin-top: 3em;
+}
+
+.activitees--marging{
+    margin: 0em $margin;
+    padding-top: 6em;
+}
+
+.activitees_famille{
+    @include title;
+    letter-spacing: 1px;
+    margin-top: 8em;
+    width: 350px;
+    font-weight: 700;
+}
+
+.activitees_texte{
+    @include title;
+    font-size: 1.4em;
+    width: 340px;
+    margin-top: -3em;
+}
+
+///////////////////////////////////////////////////////Accueil_Equipe_help
+
+.sponsor{
+    margin: 8em $margin;
+}
+
+.sponsor h2{
+ @include title;
+    font-size: 3em;
+    text-align: center;
+}
+
+.sponsor ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.partenaires{
+    width: 150px;
+    height: 150px;
+}
+
+.encart_help{
+    margin-top: 5em;
+}
+
+.encart_help h1{
+    @include title;
+    font-size: 3em;
+    border-bottom: 3px solid $blue;
+    padding-bottom: 0.5em;
+    width: 290px;
+    position: relative;
+    top: 130px;
+    right: -800px;
+    margin-bottom: initial;
+}
+
+.encart_help p{
+    @include title
+    font-size: 1.8em;
+    text-align: right;
+    width: 700px;
+    position: relative;
+    bottom: 300px;
+    right: -400px;
+}
+
+.encart_help a{
+    @include button;
+    background-color: $blue;
+    padding: 0.5em 1.5%;
+    position: relative;
+    bottom: 280px;
+    right: -1130px;
+}
+
+.encart_help a:hover{
+    background-color: $blue_dark;
+}
+
+///////////////////////////////////////////////////////END_Accueil_Equipe_help
+///////////////////////////////////////////////////////Accueil_footer
+
+footer{
+    border-top: 1px solid lightgray;
+
+}
+
+.asbl{
+    @include title;
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+footer img{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: -7em auto 5em;
+}
+
+.footer--flex{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5em;
+}
+
+footer p{
+    font-size: 1.3em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+///////////////////////////////////////////////////////END_Accueil_footer
+///////////////////////////////////////////////////////AIDE_HOW
+
+
+.comment_vous_aider--frttitle{
+    margin: 5em $margin 2em;
+    font-size: 3em;
+    border-bottom: 3px solid $pink;
+    width: 450px;
+    padding-bottom: 0.8em;
+    font-weight: 100;
+    color: dimgrey;
+}
+
+.comment_vous_aider p{
+    @include title;
+}
+
+.comment_vous_aider--scdtitle{
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 1px;
+    color: dimgrey;
+    text-align: center;
+    margin-top: 8em;
+}
+
+///////////////////////////////////////////////////////END_AIDE_HOW
+///////////////////////////////////////////////////////PROPOS
+
+.a_propos h1{
+    margin: 5em $margin 2em;
+    font-size: 3em;
+    border-bottom: 3px solid $pink;
+    width: 270px;
+    padding-bottom: 0.8em;
+    font-weight: 100;
+    color: dimgrey;
+}
+
+.a_propos p{
+    @include title;
+}
+
+.a_propos img{
+    width: 100%;
+    height: auto;
+    margin: 8em 0%;
+}
